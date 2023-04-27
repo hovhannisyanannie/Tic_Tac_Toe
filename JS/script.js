@@ -40,7 +40,7 @@ function checkWinner() {
 
     game.style.display = "flex";
     winner.innerText = player ? "X won" : "0 won";
-    heading.innerText = "";
+    heading.style.display = "none";
     audioGame.play();
     return;
   }
@@ -48,7 +48,7 @@ function checkWinner() {
   if(count == 9) {
     winner.innerText = "Nobody wins";
     game.style.display = "flex";
-    heading.innerText = "";
+    heading.style.display = "none";
     return;
   }
     player = !player;
@@ -67,6 +67,7 @@ function restartGame() {
   startGame();
   player = true;
   count = 0;
+  heading.style.display="block" 
   heading.innerText = "X's turn";
 }
 
